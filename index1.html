@@ -1,0 +1,488 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Only For Diya Babu ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at center, #26000d 0%, #10000a 45%, #03040d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .scene {
+            position: relative;
+            width: 500px;
+            height: 650px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ❤️ HEART */
+
+        .heart {
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            transform: rotate(-45deg);
+            border: 5px solid #ff1744;
+            border-radius: 50px;
+            box-shadow:
+                0 0 10px #ff1744,
+                0 0 25px #ff1744,
+                0 0 50px #ff1744,
+                inset 0 0 25px rgba(255, 23, 68, .4);
+
+            animation: heartGlow 2s infinite alternate;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 5px solid #ff1744;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -220px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 220px;
+            top: 0;
+        }
+
+        @keyframes heartGlow {
+            from {
+                filter: brightness(.8);
+            }
+
+            to {
+                filter: brightness(1.4);
+            }
+        }
+
+        /* 🌹 ROSE */
+
+        .rose {
+            position: absolute;
+            bottom: 115px;
+            width: 260px;
+            height: 420px;
+            z-index: 5;
+        }
+
+        .stem {
+            position: absolute;
+            width: 12px;
+            height: 250px;
+            background: linear-gradient(
+                to right,
+                #174d18,
+                #4caf50,
+                #123d14
+            );
+            left: 124px;
+            bottom: 20px;
+            border-radius: 20px;
+            transform-origin: bottom;
+            animation: growStem 2.5s ease-out forwards;
+        }
+
+        @keyframes growStem {
+            from {
+                height: 0;
+            }
+
+            to {
+                height: 250px;
+            }
+        }
+
+        /* 🍃 LEAVES */
+
+        .leaf {
+            position: absolute;
+            width: 90px;
+            height: 45px;
+            background: linear-gradient(135deg, #4caf50, #123d14);
+            border-radius: 100% 0 100% 0;
+            opacity: 0;
+            box-shadow: 0 0 8px rgba(76, 175, 80, .5);
+            animation: leafAppear 1s ease forwards;
+        }
+
+        .leaf.left {
+            left: 48px;
+            bottom: 125px;
+            transform: rotate(25deg);
+            animation-delay: 2s;
+        }
+
+        .leaf.right {
+            right: 35px;
+            bottom: 175px;
+            transform: rotate(160deg);
+            animation-delay: 2.3s;
+        }
+
+        @keyframes leafAppear {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* 🌹 FLOWER BLOOM */
+
+        .flower {
+            position: absolute;
+            width: 220px;
+            height: 190px;
+            left: 20px;
+            top: 20px;
+            transform-origin: bottom center;
+            animation: flowerBloom 4s ease-out forwards;
+        }
+
+        @keyframes flowerBloom {
+            0% {
+                transform: scale(.05) rotate(-10deg);
+                opacity: 0;
+            }
+
+            45% {
+                transform: scale(.65) rotate(5deg);
+                opacity: .8;
+            }
+
+            75% {
+                transform: scale(1.08) rotate(-3deg);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .petal {
+            position: absolute;
+            width: 100px;
+            height: 125px;
+            background:
+                radial-gradient(
+                    circle at 35% 25%,
+                    #ff6b81,
+                    #e90032 45%,
+                    #730014 100%
+                );
+            border-radius: 70% 30% 70% 30%;
+            box-shadow:
+                inset -8px -10px 15px rgba(70, 0, 10, .5),
+                0 0 15px rgba(255, 0, 50, .35);
+        }
+
+        .p1 {
+            left: 60px;
+            top: 30px;
+            transform: rotate(-35deg);
+        }
+
+        .p2 {
+            left: 90px;
+            top: 15px;
+            transform: rotate(10deg);
+        }
+
+        .p3 {
+            left: 115px;
+            top: 40px;
+            transform: rotate(45deg);
+        }
+
+        .p4 {
+            left: 35px;
+            top: 65px;
+            transform: rotate(-65deg);
+        }
+
+        .p5 {
+            left: 90px;
+            top: 65px;
+            transform: rotate(20deg);
+            width: 80px;
+            height: 100px;
+        }
+
+        .p6 {
+            left: 125px;
+            top: 75px;
+            transform: rotate(65deg);
+            width: 75px;
+            height: 100px;
+        }
+
+        /* 🌹 ROSE CENTER */
+
+        .center {
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            left: 78px;
+            top: 72px;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle at 40% 35%,
+                    #ff7184,
+                    #c6002c 50%,
+                    #53000f
+                );
+            z-index: 10;
+            box-shadow:
+                0 0 15px #ff1744,
+                inset -5px -5px 10px rgba(50, 0, 5, .6);
+
+            animation: centerOpen 3s ease forwards;
+        }
+
+        .center::before {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 50px;
+            left: 17px;
+            top: 8px;
+            border: 5px solid #ff7184;
+            border-radius: 50%;
+            transform: rotate(-35deg);
+            opacity: .7;
+        }
+
+        @keyframes centerOpen {
+            from {
+                transform: scale(.2);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* ❤️ FLOATING HEARTS */
+
+        .floating-heart {
+            position: absolute;
+            color: #ff1744;
+            font-size: 22px;
+            text-shadow:
+                0 0 5px #ff1744,
+                0 0 15px #ff1744;
+
+            animation: floatHeart 5s linear infinite;
+            opacity: 0;
+        }
+
+        .h1 {
+            left: 50px;
+            bottom: 50px;
+        }
+
+        .h2 {
+            right: 50px;
+            bottom: 80px;
+            animation-delay: 1.5s;
+        }
+
+        .h3 {
+            left: 80px;
+            top: 100px;
+            animation-delay: 3s;
+        }
+
+        .h4 {
+            right: 70px;
+            top: 150px;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(50px) scale(.5);
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-180px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* 🌹 FALLING PETALS */
+
+        .falling-petal {
+            position: absolute;
+            width: 18px;
+            height: 30px;
+            background: #e90032;
+            border-radius: 100% 0 100% 0;
+            opacity: .7;
+            animation: falling 6s linear infinite;
+        }
+
+        .fp1 {
+            left: 20px;
+        }
+
+        .fp2 {
+            left: 90%;
+            animation-delay: 2s;
+        }
+
+        .fp3 {
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .fp4 {
+            left: 75%;
+            animation-delay: 1s;
+        }
+
+        @keyframes falling {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: .8;
+            }
+
+            100% {
+                transform:
+                    translateY(700px)
+                    translateX(80px)
+                    rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* 💖 BOTTOM TEXT */
+
+        .love-text {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 3px;
+
+            text-shadow:
+                0 0 5px #ff1744,
+                0 0 15px #ff1744,
+                0 0 30px #ff1744;
+
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                opacity: .7;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .scene {
+                transform: scale(.72);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+
+        <!-- ❤️ Glowing Heart -->
+        <div class="heart"></div>
+
+        <!-- 🌹 Rose -->
+        <div class="rose">
+
+            <div class="stem"></div>
+
+            <div class="leaf left"></div>
+            <div class="leaf right"></div>
+
+            <div class="flower">
+
+                <div class="petal p1"></div>
+                <div class="petal p2"></div>
+                <div class="petal p3"></div>
+                <div class="petal p4"></div>
+                <div class="petal p5"></div>
+                <div class="petal p6"></div>
+
+                <div class="center"></div>
+
+            </div>
+        </div>
+
+        <!-- ❤️ Floating Hearts -->
+        <div class="floating-heart h1">❤️</div>
+        <div class="floating-heart h2">💖</div>
+        <div class="floating-heart h3">💕</div>
+        <div class="floating-heart h4">❤️</div>
+
+        <!-- 🌹 Falling Petals -->
+        <div class="falling-petal fp1"></div>
+        <div class="falling-petal fp2"></div>
+        <div class="falling-petal fp3"></div>
+        <div class="falling-petal fp4"></div>
+
+        <!-- 💖 Bottom Message -->
+        <div class="love-text">
+            Only For Diya Babu ❤️
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
